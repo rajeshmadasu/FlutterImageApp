@@ -20,6 +20,4 @@ Useful Links
 3. https://pub.dev/packages/flutter_svg
 4. https://pub.dev/packages/lottie
 
-<img src="https://raw.githubusercontent.com/rajeshmadasu/FlutterImageApp/main/screenshots/screen1.png"  width="160" height="300" />
-
 <img src="https://raw.githubusercontent.com/rajeshmadasu/FlutterImageApp/main/screenshots/lottie-images.gif"  width="160" height="300" />
