@@ -6,6 +6,7 @@ A Sample flutter application to display images.
 
 This is a application to displaying various types of images mentioned below from assets and network
 
+<img src="https://raw.githubusercontent.com/rajeshmadasu/FlutterImageApp/main/screenshots/lottie-images.gif"  width="160" height="300" />
 
 1. PNG 
 2. JPEG/JPG
@@ -20,4 +21,3 @@ Useful Links
 3. https://pub.dev/packages/flutter_svg
 4. https://pub.dev/packages/lottie
 
-<img src="https://raw.githubusercontent.com/rajeshmadasu/FlutterImageApp/main/screenshots/lottie-images.gif"  width="160" height="300" />
