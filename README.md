@@ -22,9 +22,4 @@ Useful Links
 
 <img src="https://raw.githubusercontent.com/rajeshmadasu/FlutterImageApp/main/screenshots/screen1.png"  width="160" height="300" />
 
-<img src="https://raw.githubusercontent.com/rajeshmadasu/FlutterImageApp/main/screenshots/screen2.png"  width="160" height="300" />
-
-<img src="https://raw.githubusercontent.com/rajeshmadasu/FlutterImageApp/main/screenshots/screen3.png"  width="160" height="300" />
-
-
 <img src="https://raw.githubusercontent.com/rajeshmadasu/FlutterImageApp/main/screenshots/lottie-images.gif"  width="160" height="300" />
