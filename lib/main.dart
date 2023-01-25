@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import './widget/image_viewer.dart';
-import 'package:flutter_images_app/screens/svg_network_demo.dart';
+import 'screens/image_viewer.dart';
+import './screens/svg_network_demo.dart';
+
+import './widget/simple_elevated_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -63,129 +65,79 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                width: 250,
-                child: SimpleElevatedButton(
-                    borderRadius: 16,
-                    color: Colors.green,
-                    onPressed: () => navToImageViewScreen(ImageTypes.png),
-                    child: const Text(
-                      'View Png',
-                      style: textStyle,
-                    )),
+              SimpleElevatedButton(
+                color: Colors.green,
+                onPressed: () => navToImageViewScreen(ImageTypes.png),
+                child: const Text(
+                  'View Png',
+                  style: textStyle,
+                ),
               ),
               const SizedBox(
                 height: 20,
               ),
-              SizedBox(
-                width: 250,
-                child: SimpleElevatedButton(
-                    borderRadius: 16,
-                    color: Colors.amber,
-                    onPressed: () => navToImageViewScreen(ImageTypes.jpeg),
-                    child: const Text(
-                      'View Jpeg/Jpeg',
-                      style: textStyle,
-                    )),
+              SimpleElevatedButton(
+                color: Colors.amber,
+                onPressed: () => navToImageViewScreen(ImageTypes.jpeg),
+                child: const Text(
+                  'View Jpeg/Jpeg',
+                  style: textStyle,
+                ),
               ),
               const SizedBox(
                 height: 20,
               ),
-              SizedBox(
-                width: 250,
-                child: SimpleElevatedButton(
-                    borderRadius: 16,
-                    color: Colors.orange,
-                    onPressed: () => navToImageViewScreen(ImageTypes.svg),
-                    child: const Text(
-                      'View Svg from asset',
-                      style: textStyle,
-                    )),
+              SimpleElevatedButton(
+                color: Colors.orange,
+                onPressed: () => navToImageViewScreen(ImageTypes.svg),
+                child: const Text(
+                  'View Svg from asset',
+                  style: textStyle,
+                ),
               ),
               const SizedBox(
                 height: 20,
               ),
-              SizedBox(
-                width: 250,
-                child: SimpleElevatedButton(
-                    borderRadius: 16,
-                    color: Colors.red,
-                    onPressed: () => {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const SvgNetworkDemoPage(
-                                      title: 'Svg Demo',
-                                    )),
-                          )
-                        },
-                    child: const Text(
-                      'View Svg from netowrk',
-                      style: textStyle,
-                    )),
+              SimpleElevatedButton(
+                color: Colors.red,
+                onPressed: () => {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SvgNetworkDemoPage(
+                              title: 'Svg Demo',
+                            )),
+                  )
+                },
+                child: const Text(
+                  'View Svg from netowrk',
+                  style: textStyle,
+                ),
               ),
               const SizedBox(
                 height: 20,
               ),
-              SizedBox(
-                width: 250,
-                child: SimpleElevatedButton(
-                    borderRadius: 16,
-                    color: Colors.blue,
-                    onPressed: () => navToImageViewScreen(ImageTypes.lottie),
-                    child: const Text(
-                      'View Lottie',
-                      style: textStyle,
-                    )),
+              SimpleElevatedButton(
+                color: Colors.blue,
+                onPressed: () => navToImageViewScreen(ImageTypes.lottie),
+                child: const Text(
+                  'View Lottie',
+                  style: textStyle,
+                ),
               ),
               const SizedBox(
                 height: 20,
               ),
-              SizedBox(
-                width: 250,
-                child: SimpleElevatedButton(
-                    borderRadius: 16,
-                    color: Colors.purple,
-                    onPressed: () => navToImageViewScreen(ImageTypes.network),
-                    child: const Text(
-                      'View images from Network ',
-                      style: textStyle,
-                    )),
+              SimpleElevatedButton(
+                color: Colors.purple,
+                onPressed: () => navToImageViewScreen(ImageTypes.network),
+                child: const Text(
+                  'View images from Network ',
+                  style: textStyle,
+                ),
               ),
             ],
           ),
         ));
-  }
-}
-
-class SimpleElevatedButton extends StatelessWidget {
-  const SimpleElevatedButton(
-      {this.child,
-      this.color,
-      this.onPressed,
-      this.borderRadius = 6,
-      this.padding = const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-      Key? key})
-      : super(key: key);
-  final Color? color;
-  final Widget? child;
-  final Function? onPressed;
-  final double borderRadius;
-  final EdgeInsetsGeometry padding;
-
-  @override
-  Widget build(BuildContext context) {
-    ThemeData currentTheme = Theme.of(context);
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        padding: padding,
-        backgroundColor: color ?? currentTheme.primaryColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(borderRadius),
-        ),
-      ),
-      onPressed: onPressed as void Function()?,
-      child: child,
-    );
   }
 }
